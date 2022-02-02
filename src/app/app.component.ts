@@ -10,7 +10,7 @@ import { LanguageCodes } from '../shared/enums/LanguageCodes';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-Twitter Clone';
+  title = 'ng-Starter';
 
   constructor(private translate: TranslateService) {
     const storedLanguage = localStorage.getItem('languageCode');
