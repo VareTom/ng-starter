@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './containers/home/home.component';
 
 // Modules
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from 'src/shared/shared.module';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }

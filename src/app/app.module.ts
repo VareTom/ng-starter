@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 // Third Party modules
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -13,14 +13,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 
 // Modules
-import { SharedModule } from '../shared/shared.module';
-import { HomeModule } from '../home/home.module';
+import { SharedModule } from 'src/shared/shared.module';
+import { HomeModule } from 'src/cms/home/home.module';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, 'assets/i18n/', '.json');
 }
 
-const routes = [
+const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', redirectTo: 'home' },
 ]
